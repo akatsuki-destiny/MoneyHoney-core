@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class RegisterService {
 
-    private RegisterRepository registerRepository;
+    private final RegisterRepository registerRepository;
 
     public UserEntity registerUser(UserEntity user) {
         System.out.println("kaydedilecek");
         return registerRepository.save(user);
     }
-
 }
+
