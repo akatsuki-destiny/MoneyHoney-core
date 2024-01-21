@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  moneyhoney-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - moneyhoney
+
+networks:
+  moneyhoney:
+    external: true
